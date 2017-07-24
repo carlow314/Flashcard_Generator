@@ -1,0 +1,22 @@
+{
+  "name": "flashcard_generator",
+  "version": "0.0.0",
+  "description": "App to create flashcards using constructors and callbacks",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlow314/Flashcard_Generator.git"
+  },
+  "author": "Jeff Carlow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlow314/Flashcard_Generator/issues"
+  },
+  "homepage": "https://github.com/carlow314/Flashcard_Generator#readme",
+  "dependencies": {
+    "inquirer": "^3.2.0"
+  }
+}

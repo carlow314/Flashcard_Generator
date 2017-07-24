@@ -3,7 +3,8 @@ module.exports = BasicCard;
 function BasicCard(front, back){
   this.front = front;
   this.back = back;
+  this.printInfo = function(){
+    console.log(this.front);
+    console.log(this.back);
+  };
 }
-
-var test = new BasicCard ("Who won the NBA Champioship this year" , "The Golden State Warriors");
-console.log(test);
