@@ -1,0 +1,8 @@
+Front: ____________ is the best football team
+
+Back: Clemson
+
+Front: What month is it?
+
+Back: July
+

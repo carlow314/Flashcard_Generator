@@ -2,6 +2,17 @@
 var ClozeCard = require('./ClozeCard');
 var BasicCard = require('./BasicCard');
 var inquirer = require('inquirer');
+var fs = require('fs');
+
+//function to write created flash card to log.txt
+function appendCard (cardEntry) {
+fs.appendFile('log.txt', cardEntry, function (error) {
+if (error) {
+  console.log(error);
+  }
+});
+};
+
 
 //initial prompt asking the user what kind of flash card the user would like to create
 inquirer.prompt([
@@ -45,6 +56,8 @@ function newBasicCard(){
   var basicAnswer = process.argv[3];
   var myBasicCard = new BasicCard (basicResponse.basicQuestion,basicResponse.basicAnswer);
   myBasicCard.printInfo();
+  appendCard("Front: " + myBasicCard.front + "\r\n\r\n");
+  appendCard("Back: " + myBasicCard.back + "\r\n\r\n");
   })
 };
 
@@ -68,5 +81,7 @@ function newClozeCard(){
   var cloze = process.argv[3];
   var myClozeCard = new ClozeCard (clozeResponse.text,clozeResponse.cloze);
   myClozeCard.printInfo();
+  appendCard("Front: " + myClozeCard.partial + "\r\n\r\n");
+  appendCard("Back: " + myClozeCard.cloze + "\r\n\r\n");
   })
 };
