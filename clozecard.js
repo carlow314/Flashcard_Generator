@@ -1,6 +1,7 @@
 module.exports = ClozeCard;
 
-function ClozeCard(text, cloze,error){
+function ClozeCard(text, cloze, error){
+  if(this instanceof ClozeCard) {
   this.text = text;
   this.cloze = cloze;
   this.partial = text.replace(this.cloze, "____________");
@@ -8,5 +9,9 @@ function ClozeCard(text, cloze,error){
     console.log(this.text);
     console.log(this.cloze);
     console.log(this.partial);
-  };
+  }
+}
+  else {
+    return new ClozeCard(text, cloze, error);
+  }
 }

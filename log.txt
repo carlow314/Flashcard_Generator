@@ -6,3 +6,7 @@ Front: What month is it?
 
 Back: July
 
+Front: What is the best color in the world?
+
+Back: Blue
+
